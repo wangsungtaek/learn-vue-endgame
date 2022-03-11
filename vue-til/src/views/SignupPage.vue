@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>회원가입</h2>
+    <h1 class="page-header">회원 가입 페이지</h1>
     <SignupForm></SignupForm>
   </div>
 </template>
