@@ -3,12 +3,14 @@
     <div>
       <router-link to="/" class="logo">
         TIL
+        <span v-if="isUserLogin">by {{ $store.state.username }}</span>
       </router-link>
     </div>
     <div class="navigations">
       <template v-if="isUserLogin">
-        <span class="username">{{ this.$store.state.username }}</span>
-        <a href="javascript:;" @click="logoutUser">Logout</a>
+        <a href="javascript:;" @click="logoutUser" class="logout-button">
+          Logout
+        </a>
       </template>
       <template v-else>
         <router-link to="/login">로그인</router-link>
@@ -37,6 +39,9 @@ export default {
 <style scoped>
 .username {
   color: white;
+}
+.logout-button {
+  font-size: 14px;
 }
 header {
   display: flex;
