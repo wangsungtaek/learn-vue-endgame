@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import { createPosts } from '@/api/index.js';
+import { createPosts } from '@/api/posts.js';
 
 export default {
   data() {
