@@ -10,4 +10,9 @@ function createPosts(postData) {
   return posts.post('/', postData);
 }
 
-export { fetchPosts, createPosts };
+// 학습 노트 삭제
+function deletePosts(postId) {
+  return posts.delete(postId);
+}
+
+export { fetchPosts, createPosts, deletePosts };
