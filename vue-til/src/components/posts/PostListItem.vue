@@ -8,7 +8,7 @@
     </div>
     <div class="post-time">
       {{ postItem.createdAt }}
-      <span style="color: blue;">수정 |</span>
+      <span style="color: blue;" @click="routeEditPage">수정 |</span>
       <span style="color: red;" @click="deleteItem"> 삭제</span>
     </div>
   </li>
@@ -30,6 +30,10 @@ export default {
         await deletePosts(this.postItem._id);
         this.$emit('refresh');
       }
+    },
+    routeEditPage() {
+      const id = this.postItem._id;
+      this.$router.push(`/post/${id}`);
     },
   },
 };
