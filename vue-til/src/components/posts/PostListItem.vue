@@ -7,7 +7,7 @@
       {{ postItem.contents }}
     </div>
     <div class="post-time">
-      {{ postItem.createdAt }}
+      {{ postItem.createdAt | formatDate }}
       <span style="color: blue;" @click="routeEditPage">수정 |</span>
       <span style="color: red;" @click="deleteItem"> 삭제</span>
     </div>
